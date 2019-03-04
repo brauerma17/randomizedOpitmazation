@@ -359,26 +359,26 @@ for i in range(4, 20):
 writeToExcel.writeOptimzationProblem(rhcFit, saFit, genFit, mimicFit, "KQueens.xlsx")
 
 #4 peaks iteration testing
-#FourPeaks(8, False)
-# # 4 Peaks length of array testing
-# rhcFit = []
-# saFit = []
-# genFit = []
-# mimicFit = []
-# for i in range(4, 30):
-#     print("Array Len: " + str(i))
-#     rhc, sa, gen, mimic = FourPeaks(i, True)
-#     add = (i, rhc[0][1], rhc[0][2])
-#     rhcFit.append(add)
-#     add = (i, sa[0][1], sa[0][2])
-#     saFit.append(add)
-#     add = (i, gen[0][1], gen[0][2])
-# #     genFit.append(add)
-# #     add = (i, mimic[0][1], mimic[0][2])
-# #     mimicFit.append(add)
-# # writeToExcel.writeOptimzationProblem(rhcFit, saFit, genFit, mimicFit, "FourPeaksLength.xlsx")
+# FourPeaks(8, False)
+# 4 Peaks length of array testing
+rhcFit = []
+saFit = []
+genFit = []
+mimicFit = []
+for i in range(4, 30):
+    print("Array Len: " + str(i))
+    rhc, sa, gen, mimic = FourPeaks(i, True)
+    add = (i, rhc[0][1], rhc[0][2])
+    rhcFit.append(add)
+    add = (i, sa[0][1], sa[0][2])
+    saFit.append(add)
+    add = (i, gen[0][1], gen[0][2])
+    genFit.append(add)
+    add = (i, mimic[0][1], mimic[0][2])
+    mimicFit.append(add)
+writeToExcel.writeOptimzationProblem(rhcFit, saFit, genFit, mimicFit, "FourPeaksLength.xlsx")
 
-# #Travelling Salesman iteration testing
+#Travelling Salesman iteration testing
 # np.random.seed(13)
 # coordinates = []
 # cities = 10
@@ -423,20 +423,20 @@ writeToExcel.writeOptimzationProblem(rhcFit, saFit, genFit, mimicFit, "KQueens.x
 
 # writeToExcel.writeOptimzationProblem(rhcFit, saFit, genFit, mimicFit, "TSNumCitiesMax.xlsx")
 
-#Knapsack fixed len
-# rhcFit = []
-# saFit = []
-# genFit = []
-# mimicFit = []
-# np.random.seed(13)
-# values = []
-# weights = []
-# for i in range(10):
-#     val = int(np.random.uniform(1, 10, None))
-#     weight = int(np.random.uniform(1, 10, None))
-#     values.append(val)
-#     weights.append(weight)
-# KnapSack(weights, values, False)
+Knapsack fixed len
+rhcFit = []
+saFit = []
+genFit = []
+mimicFit = []
+np.random.seed(13)
+values = []
+weights = []
+for i in range(10):
+    val = int(np.random.uniform(1, 10, None))
+    weight = int(np.random.uniform(1, 10, None))
+    values.append(val)
+    weights.append(weight)
+KnapSack(weights, values, False)
 
 # #knapsack increase len
 
